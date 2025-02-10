@@ -2,131 +2,76 @@ import streamlit as st
 
 # Configuration de la page avec image favicon
 st.set_page_config(
-    page_title="Georges Zam | Portfolio Ingénierie IA",
+    page_title="Georges Zam ",
     page_icon="🚀",
     layout="wide"
 )
 
 # CSS personnalisé avec dégradé professionnel
-st.markdown("""
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap');
-    
-    .main {
-        background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-        color: #f8fafc;
-        font-family: 'Roboto Mono', monospace;
-    }
-    
-    .skill-card {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        padding: 1.5rem;
-        margin: 1rem 0;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .project-link {
-        transition: transform 0.3s ease;
-    }
-    
-    .project-link:hover {
-        transform: translateX(10px);
-    }
-</style>
-""", unsafe_allow_html=True)
+st.markdown("""# Georges Zam
+**Ingénieur Informatique | Data, IA et Développement Logiciel**
 
-# Header avec photo et texte côte à côte
-col1, col2 = st.columns([1, 2], gap="medium")
-with col1:
-    st.image("https://via.placeholder.com/300x300.png?text=Georges+Zam", width=250)  # Remplacez par votre photo
-    
-with col2:
-    st.markdown("# Georges Zam  \n**Ingénieur IA en devenir | CESI Nanterre**", unsafe_allow_html=True)
-    st.markdown("""
-    🔍 *Actuellement en recherche d'un stage ouvrier technique (3-4 mois) à partir d'avril 2025*
-    
-    *"Transformer les concepts en solutions concrètes grâce à une approche ingénieuse"*
-    """)
+## 📌 Objectif
+Je recherche un stage de 3 à 4 mois à partir d'avril 2025 dans les domaines de l'informatique, de la data science, de l'intelligence artificielle, et du développement logiciel. Je suis ouvert à des missions techniques variées et à des responsabilités liées au développement de systèmes informatiques. À l'issue de ce stage, je suis également intéressé par une opportunité d'alternance.
 
-# Section Compétences avec cards animées
-st.header("🛠️ Expertise Technologique")
-with st.container():
-    col3, col4, col5 = st.columns(3)
-    with col3:
-        st.markdown("""
-        <div class="skill-card">
-            <h4>🤖 Intelligence Artificielle</h4>
-            • Machine Learning avancé  \n• NLP (Transformers)  \n• Computer Vision
-        </div>
-        """, unsafe_allow_html=True)
-    with col4:
-        st.markdown("""
-        <div class="skill-card">
-            <h4>💻 Développement Créatif</h4>
-            • Python Full Stack  \n• Automatisation Arduino  \n• Simulation Tinkercad
-        </div>
-        """, unsafe_allow_html=True)
-    with col5:
-        st.markdown("""
-        <div class="skill-card">
-            <h4>🚀 Gestion de Projets</h4>
-            • Méthodes Agile  \n• Conduite d'innovation  \n• Optimisation processus
-        </div>
-        """, unsafe_allow_html=True)
+## 🎓 Formation
+**2023 – Présent : CESI Nanterre, France**
+- **2ème année (Informatique)** : Microcontrôleurs, programmation orientée objet, réseaux, développement web.
+- **1ère année (Généraliste)** : Traitement du signal, mécanique, BTP, électronique, industrie.
 
-# Section Projets avec interactions
-st.header("💡 Réalisations Concrètes")
-tab1, tab2 = st.tabs(["Projets Techniques", "Contributions Open Source"])
-with tab1:
-    st.markdown("""
-    ### 🏗️ Projets Phares
-    - **Système de surveillance IoT** : Architecture cloud-based avec analyse prédictive
-    - **Chatbot industriel** : NLP customisé pour la maintenance préventive
-    - **Simulateur IA** : Modèle de détection d'anomalies en temps réel
-    """)
-    
-with tab2:
-    st.markdown("""
-    ### 👨💻 Collaborations
-    - Contribution à **TensorFlow Extended** (optimisation de pipelines)
-    - Développement de librairie Arduino pour la domotique
-    - Tutoriels Python sur Dev.to (+15k vues)
-    """)
+**2016 – 2023 : Lycée Alain, Le Vésinet**
+- Baccalauréat scientifique, spécialité mathématiques (expert), physique, chimie et informatique.
 
-st.markdown("""
-<div class="project-link">
-    🔗 [Explorez mes projets GitHub](https://github.com/GeorgesZam)  
-    🔗 [Connectons-nous sur LinkedIn](https://www.linkedin.com/in/georges-zam-6aa2b3332/)
-</div>
-""", unsafe_allow_html=True)
+## 💼 Expérience Professionnelle & Projets
+**2024 – Présent**
+- **Médaille d'argent au WorldSkills 2025 IDF** en solutions logicielles pour entreprise.
+- **Vice-Président, CESI AERO Club** : Direction d'une équipe pour la conception, l'optimisation et le lancement d'une fusée.
+- **Organisation de compétitions d'hovercrafts** : Victoire à la première place.
+- **Développement de systèmes basés sur des capteurs** avec microcontrôleurs et scripts Bash.
 
-# Section Contact avec formulaire interactif
-st.header("📬 Contact Rapide")
-with st.form(key='contact_form'):
-    col6, col7 = st.columns(2)
-    with col6:
-        name = st.text_input("Nom complet")
-    with col7:
-        email = st.text_input("Email professionnel")
-    
-    message = st.text_area("Votre message (soyez spécifique sur vos besoins techniques)")
-    submit_button = st.form_submit_button("Envoyer →")
-    
-    if submit_button:
-        st.success(f"Merci {name}! Votre demande concernant **{message[:30]}...** a bien été envoyée")
+**Depuis 2022 — Professeur particulier**
+- Enseignement des mathématiques, de la physique, de la chimie et de l'informatique à des élèves de lycée.
+- Focus sur l'amélioration des compétences dans les matières scientifiques et d'ingénierie.
+- Projets collaboratifs en informatique.
+- Administration quotidienne de systèmes Linux : dépannage et optimisation.
 
-# Footer avec éléments sociaux
-st.markdown("---")
-st.markdown("""
-<div style="text-align: center">
-    <p>📌 Disponible pour des défis techniques complexes - Dernière mise à jour : Février 2025</p>
-    <div style="display: flex; gap: 2rem; justify-content: center">
-        <a href="https://github.com/GeorgesZam"><img src="https://img.icons8.com/3d-fluency/50/000000/github.png" width=40></a>
-        <a href="https://www.linkedin.com/in/georges-zam-6aa2b3332/"><img src="https://img.icons8.com/3d-fluency/50/000000/linkedin.png" width=40></a>
-        <a href="mailto:zamgeorges0@gmail.com"><img src="https://img.icons8.com/3d-fluency/50/000000/gmail.png" width=40></a>
-    </div>
-    <p style="margin-top: 1rem">© 2025 Georges Zam - Tous droits réservés</p>
-</div>
-""", unsafe_allow_html=True)
+## 🛠️ Compétences Techniques
+**Langages de programmation**
+- Python, C/C++, C#, Java, Bash, SQL, HTML/CSS/JavaScript.
+
+**Systèmes d'exploitation**
+- Linux (Debian), MacOS, Windows.
+
+**AI & Data Science**
+- PyTorch, Scikit-learn, Hugging Face, Ollama, Kaggle, Mistral.
+
+**Analyse de données**
+- Pandas, Matplotlib, MATLAB.
+
+**Logiciels de 3D**
+- Fusion 360, Blender, Cura.
+
+**Développement Web**
+- Applications web avec Streamlit.
+
+**Outils de versioning**
+- Git, GitHub, GitLab.
+
+**Autres compétences**
+- UML / SYSML, CISCO CCNA1, UNITY VR Basics, Excel, Word, PowerPoint, Latex.
+
+## 🌍 Langues
+- **Français** : C2
+- **Anglais** : B2 – C1
+- **Espagnol** : A2
+
+## 🎯 Centres d'intérêt
+- Intelligence artificielle et analyse de données.
+- Administration et automatisation des systèmes Linux.
+- Modélisation 3D et prototypage.
+- Développement logiciel.
+
+## 🔗 Liens
+- [GitHub](https://github.com/GeorgesZam)
+- [LinkedIn](https://www.linkedin.com/in/georges-zam-6aa2b3332/)""", unsafe_allow_html=True)
+
