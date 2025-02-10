@@ -1,77 +1,165 @@
 import streamlit as st
 
-# Configuration de la page avec image favicon
+# Configuration de la page
 st.set_page_config(
-    page_title="Georges Zam ",
-    page_icon="🚀",
+    page_title="Georges Zam - CV Interactif",
+    page_icon="📄",
     layout="wide"
 )
 
-# CSS personnalisé avec dégradé professionnel
-st.markdown("""# Georges Zam
-**Ingénieur Informatique | Data, IA et Développement Logiciel**
+# CSS personnalisé pour un design moderne
+st.markdown("""
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&family=Inter:wght@400;600&display=swap');
 
-## 📌 Objectif
-Je recherche un stage de 3 à 4 mois à partir d'avril 2025 dans les domaines de l'informatique, de la data science, de l'intelligence artificielle, et du développement logiciel. Je suis ouvert à des missions techniques variées et à des responsabilités liées au développement de systèmes informatiques. À l'issue de ce stage, je suis également intéressé par une opportunité d'alternance.
+    .main {
+        background-color: #F8FAFC;
+        color: #0F172A;
+        font-family: 'Inter', sans-serif;
+    }
 
-## 🎓 Formation
-**2023 – Présent : CESI Nanterre, France**
-- **2ème année (Informatique)** : Microcontrôleurs, programmation orientée objet, réseaux, développement web.
-- **1ère année (Généraliste)** : Traitement du signal, mécanique, BTP, électronique, industrie.
+    h1, h2, h3 {
+        color: #1E3A8A;
+        font-family: 'Roboto Mono', monospace;
+    }
 
-**2016 – 2023 : Lycée Alain, Le Vésinet**
-- Baccalauréat scientifique, spécialité mathématiques (expert), physique, chimie et informatique.
+    .card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid #E2E8F0;
+    }
 
-## 💼 Expérience Professionnelle & Projets
-**2024 – Présent**
-- **Médaille d'argent au WorldSkills 2025 IDF** en solutions logicielles pour entreprise.
-- **Vice-Président, CESI AERO Club** : Direction d'une équipe pour la conception, l'optimisation et le lancement d'une fusée.
-- **Organisation de compétitions d'hovercrafts** : Victoire à la première place.
-- **Développement de systèmes basés sur des capteurs** avec microcontrôleurs et scripts Bash.
+    .card:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease;
+    }
 
-**Depuis 2022 — Professeur particulier**
-- Enseignement des mathématiques, de la physique, de la chimie et de l'informatique à des élèves de lycée.
-- Focus sur l'amélioration des compétences dans les matières scientifiques et d'ingénierie.
-- Projets collaboratifs en informatique.
-- Administration quotidienne de systèmes Linux : dépannage et optimisation.
+    .skill-badge {
+        display: inline-block;
+        background: #1E3A8A;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        margin: 0.25rem;
+        font-size: 0.9rem;
+    }
 
-## 🛠️ Compétences Techniques
-**Langages de programmation**
-- Python, C/C++, C#, Java, Bash, SQL, HTML/CSS/JavaScript.
+    .link-button {
+        display: inline-block;
+        background: #1E3A8A;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        text-decoration: none;
+        margin: 0.5rem 0;
+    }
 
-**Systèmes d'exploitation**
-- Linux (Debian), MacOS, Windows.
+    .link-button:hover {
+        background: #0F172A;
+    }
+</style>
+""", unsafe_allow_html=True)
 
-**AI & Data Science**
-- PyTorch, Scikit-learn, Hugging Face, Ollama, Kaggle, Mistral.
+# Header avec photo et titre
+col1, col2 = st.columns([1, 3], gap="medium")
+with col1:
+    st.image("https://via.placeholder.com/200x200.png?text=Photo+Profil", width=150)  # Remplacez par votre photo
 
-**Analyse de données**
-- Pandas, Matplotlib, MATLAB.
+with col2:
+    st.markdown("# Georges Zam")
+    st.markdown("**Ingénieur Informatique | Data, IA et Développement Logiciel**")
+    st.markdown("📅 Recherche un stage de 3-4 mois à partir d'avril 2025")
+    st.markdown("📍 CESI Nanterre, France")
 
-**Logiciels de 3D**
-- Fusion 360, Blender, Cura.
+# Section Objectif
+st.markdown("## 🎯 Objectif")
+with st.container():
+    st.markdown("""
+    <div class="card">
+        Je recherche un stage dans les domaines de l'informatique, de la data science, de l'intelligence artificielle, et du développement logiciel. 
+        Je suis ouvert à des missions techniques variées et à des responsabilités liées au développement de systèmes informatiques. 
+        À l'issue de ce stage, je suis également intéressé par une opportunité d'alternance.
+    </div>
+    """, unsafe_allow_html=True)
 
-**Développement Web**
-- Applications web avec Streamlit.
+# Section Formation
+st.markdown("## 🎓 Formation")
+with st.container():
+    col3, col4 = st.columns(2)
+    with col3:
+        st.markdown("""
+        <div class="card">
+            <h3>CESI Nanterre, France</h3>
+            <p><strong>2023 – Présent</strong></p>
+            <ul>
+                <li>2ème année (Informatique) : Microcontrôleurs, POO, réseaux, développement web</li>
+                <li>1ère année (Généraliste) : Traitement du signal, mécanique, BTP, électronique</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+    with col4:
+        st.markdown("""
+        <div class="card">
+            <h3>Lycée Alain, Le Vésinet</h3>
+            <p><strong>2016 – 2023</strong></p>
+            <ul>
+                <li>Baccalauréat scientifique, spécialité mathématiques (expert)</li>
+                <li>Physique, chimie, et informatique</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
 
-**Outils de versioning**
-- Git, GitHub, GitLab.
+# Section Expérience Professionnelle
+st.markdown("## 💼 Expérience Professionnelle")
+with st.container():
+    st.markdown("""
+    <div class="card">
+        <h3>Médaille d'argent au WorldSkills 2025 IDF</h3>
+        <p><strong>2024 – Présent</strong></p>
+        <ul>
+            <li>Solutions logicielles pour entreprise</li>
+            <li>Vice-Président du CESI AERO Club</li>
+            <li>Conception et lancement d'une fusée</li>
+            <li>Compétitions d'hovercrafts (1ère place)</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
 
-**Autres compétences**
-- UML / SYSML, CISCO CCNA1, UNITY VR Basics, Excel, Word, PowerPoint, Latex.
+# Section Compétences
+st.markdown("## 🛠️ Compétences Techniques")
+with st.container():
+    st.markdown("""
+    <div class="card">
+        <h3>Langages de programmation</h3>
+        <span class="skill-badge">Python</span>
+        <span class="skill-badge">C/C++</span>
+        <span class="skill-badge">Java</span>
+        <span class="skill-badge">Bash</span>
+        <span class="skill-badge">SQL</span>
+        <span class="skill-badge">HTML/CSS/JS</span>
+    </div>
+    <div class="card">
+        <h3>AI & Data Science</h3>
+        <span class="skill-badge">PyTorch</span>
+        <span class="skill-badge">Scikit-learn</span>
+        <span class="skill-badge">Hugging Face</span>
+        <span class="skill-badge">Kaggle</span>
+    </div>
+    """, unsafe_allow_html=True)
 
-## 🌍 Langues
-- **Français** : C2
-- **Anglais** : B2 – C1
-- **Espagnol** : A2
+# Section Liens
+st.markdown("## 🔗 Liens")
+with st.container():
+    st.markdown("""
+    <div class="card">
+        <a href="https://github.com/GeorgesZam" class="link-button">GitHub</a>
+        <a href="https://www.linkedin.com/in/georges-zam-6aa2b3332/" class="link-button">LinkedIn</a>
+    </div>
+    """, unsafe_allow_html=True)
 
-## 🎯 Centres d'intérêt
-- Intelligence artificielle et analyse de données.
-- Administration et automatisation des systèmes Linux.
-- Modélisation 3D et prototypage.
-- Développement logiciel.
-
-## 🔗 Liens
-- [GitHub](https://github.com/GeorgesZam)
-- [LinkedIn](https://www.linkedin.com/in/georges-zam-6aa2b3332/)""", unsafe_allow_html=True)
-
+# Footer
+st.markdown("---")
+st.markdown("© 2025 - Georges Zam | CV Interactif")
