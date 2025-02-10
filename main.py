@@ -66,7 +66,7 @@ st.markdown("""
 # Header avec photo et titre
 col1, col2 = st.columns([1, 3], gap="medium")
 with col1:
-    st.image("https://via.placeholder.com/200x200.png?text=Photo+Profil", width=150)  # Remplacez par votre photo
+    st.image("https://media.licdn.com/dms/image/v2/D4E03AQEd8bYIj96nvA/profile-displayphoto-shrink_400_400/B4EZSYkmgHHAAk-/0/1737726519746?e=1744848000&v=beta&t=xmK-gWog2EqFwPy6wQU9o6h9lai9_HG8rxaT8gZgJCY", width=150)  # Remplacez par votre photo
 
 with col2:
     st.markdown("# Georges Zam")
